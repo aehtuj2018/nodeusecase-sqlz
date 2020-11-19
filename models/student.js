@@ -1,10 +1,9 @@
-const Sequelize = require("sequelize");
-const Sequelize = require("./../configuration/config");
-
+const Sequelize = require('sequelize');
+const sequelize = require('../configuration/config');
 
 // define sequlize Model
 
-const Student = sequelize.define("students", {
+const student = sequelize.define('Student', {
   id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
@@ -26,7 +25,8 @@ const Student = sequelize.define("students", {
   Nationality: {
     type: Sequelize.STRING,
     allowNull: false,
-  },
-});
+  }
+},
+  {timestamps:false});
 
-module.exports = Student;
+module.exports = student;
